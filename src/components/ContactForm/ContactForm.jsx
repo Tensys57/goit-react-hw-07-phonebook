@@ -5,7 +5,8 @@ import { useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
 
 import css from './ContactForm.module.css';
-import { addContact } from 'redux/contactsSlice';
+// import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 
 export const ContactForm = () => {
   const contacts = useSelector(selectContacts);

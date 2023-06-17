@@ -1,10 +1,12 @@
 import css from './Contacts.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, selectFilter } from 'redux/selectors';
-import { deleteContact } from 'redux/contactsSlice';
+// import { deleteContact } from 'redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 
 export const Contacts = () => {
   const contacts = useSelector(selectContacts);
+  console.log('contacts.lenght', contacts.lenght);
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
 
