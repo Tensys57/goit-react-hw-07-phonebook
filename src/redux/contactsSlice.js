@@ -5,6 +5,7 @@ const initialState = {
   items: [],
   isLoading: false,
   error: null,
+
   filter: '',
 };
 const handlePending = state => {
@@ -18,6 +19,11 @@ const handleRejected = (state, action) => {
 const contactSlice = createSlice({
   name: 'contacts',
   initialState,
+  reducers: {
+    changeFilter: (state, action) => {
+      state.filter = action.payload;
+    },
+  },
 
   extraReducers: {
     [fetchContacts.pending]: handlePending,
